@@ -60,3 +60,46 @@ This is **Day 1 of my coding journey** — documenting my progress through real 
 
 1. **Clone this repository:**
 ```bash
+   git clone https://github.com/zaibrix/multiplication-table-generator.git
+```
+
+2. **Open the project folder:**
+```bash
+   cd multiplication-table-generator
+```
+
+3. **Open `index.html` in your browser**, or use **Live Server** in VS Code for hot reload.
+
+## 📁 Project Structure
+```
+Multiplication-Table-Generator/
+│
+├── index.html       # Main HTML structure
+├── style.css        # Styling and animations
+├── script.js        # JavaScript logic
+├── screenshot.PNG   # Preview image
+└── README.md        # Project documentation
+```
+
+## 👤 About Me
+
+**Shahzaib** – Aspiring Web Developer  
+📍 Multan, Pakistan | 🎂 16 years old  
+
+💼 [GitHub](https://github.com/zaibrix)  
+🌐 Portfolio: *Coming soon*  
+📧 Contact: zaibrix.labs@gmail.com
+
+---
+
+*Building in public, one project at a time. Follow my journey! 🚀*
+
+## 📜 License
+
+This project is open-source and free to use for learning purposes.
+
+Feel free to fork, modify, and use this code in your own projects!
+
+---
+
+⭐ **If you found this helpful, give it a star!**
