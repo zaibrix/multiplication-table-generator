@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    background: #000000f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+.section {
+    background-color: pink;
+    width: 95vw;
+    max-width: 500px;
+    max-height: 600px;
+    padding: 2rem 1rem;
+    position: relative;
+    background: #000000;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    background-position: 0 0;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+h2 {
+    padding: 2rem;
+
+}
+input {
+    width: 100%;
+    max-width: 250px;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background: #0a0a0a;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+    outline: none;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+input:focus {
+    background: #0f0f0f;
+    box-shadow: 0 0 0 2px #8a2be2;
+}
+button {
+    width: 100%;
+    max-width: 250px;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #0f0f0f 0%, #0d0c0e 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+button::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%) scaleX(1.2);
+    width: 80%;
+    height: 18px;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.05) 80%, transparent 100%);
+    filter: blur(2px);
+    opacity: 0.7;
+    z-index: -1;
+    animation: underglow 2s infinite alternate;
+}
+@keyframes underglow {
+    0% { opacity: 0.5; transform: translateX(-50%) scaleX(1.1); }
+    100% { opacity: 1; transform: translateX(-50%) scaleX(1.3); }
+}
+button:hover, button:focus {
+    background: linear-gradient(90deg, #1b1b1b 0%, #080808 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(75, 74, 75, 0.18);
+    outline: none;
+}
+.output {
+    background: rgba(22, 22, 22, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(138,43,226,0.10), 0 1.5px 8px rgba(0,0,0,0.18);
+    padding: 2rem 1.5rem;
+    margin-top: 1.5rem;
+    min-height: 60px;
+    color: #fff;
+    font-size: 1.15rem;
+    letter-spacing: 0.01em;
+    transition: box-shadow 0.2s, background 0.2s;
+    word-break: break-word;
+    overflow-x: auto;
+    border: 1.5px solid rgba(10, 2, 19, 0.18);
+    animation: outputFadeIn 0.7s;
+}
+@keyframes outputFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Add or update these styles in your style.css */
+
+/* Limit output width to section and allow horizontal scroll if needed */
+.output {
+    max-width: 100%;
+    overflow-x: auto;
+    /* ...existing styles... */
+}
+
+/* Make output scrollable vertically if it gets too tall */
+.section {
+    /* ...existing styles... */
+  
+    overflow-y: auto;
+}
+
+/* Optional: Prevent .output from growing too tall */
+.output {
+    max-height: 320px;
+    overflow-y: auto;
+}
+/* Hide scrollbar for Chrome, Edge, Safari */
+.output::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.output {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for IE and Edge (legacy) */
+.output {
+  -ms-overflow-style: none;
+}
+@media (max-width: 600px) {
+  .section {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+    min-width: 0;
+  }
+  h2 {
+    padding: 1rem 0.2rem;
+    font-size: 1.2rem;
+  }
+  .output {
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+  }
+  input, button {
+    max-width: 98vw;
+    font-size: 1rem;
+    padding: 0.6rem 0.5rem;
+  }
+}
