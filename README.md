@@ -97,7 +97,7 @@ Multiplication-Table-Generator/
 
 This project is open-source and free to use for learning purposes.
 
-Feel free to fork, modify, and use this code in your own projects!
+Feel free to fork, modify, star it and use this code in your own projects!
 
 ---
 
