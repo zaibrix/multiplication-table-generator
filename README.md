@@ -10,7 +10,6 @@ A clean and interactive web app that instantly generates a multiplication table 
 
 ![Multiplication Table Preview](./screenshot.PNG)
 
-*Screenshot showing the multiplication table for 7 × (1-10)*
 
 ## ✨ Features
 
